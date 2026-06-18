@@ -7,7 +7,9 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { 
   FolderGit2, 
-  ArrowRight
+  ArrowRight,
+  Smartphone,
+  ExternalLink
 } from 'lucide-react';
 import * as THREE from 'three';
 
@@ -52,8 +54,6 @@ function QuantumGrid() {
   );
 }
 
-// PERBAIKAN: Jalur gambar disesuaikan langsung ke root public (tanpa kata public / projects)
-// Menyesuaikan dengan nama file mockup desktop Anda yang ada di dalam folder public
 export const PROJECTS_DATA = [
   {
     id: "socialhub",
@@ -120,7 +120,43 @@ export default function Projects() {
           </p>
         </div>
 
-        {/* Grid Container Kartu Proyek */}
+        {/* ================= BAGIAN KHUSUS: MOBILE APP DRIVE LINK ================= */}
+        <div className="relative group w-full bg-gradient-to-r from-teal-950/20 via-zinc-900/40 to-zinc-900/10 backdrop-blur-md rounded-2xl border border-teal-500/20 hover:border-teal-500/40 shadow-2xl p-6 sm:p-8 transition-all duration-500 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 overflow-hidden">
+          {/* Efek Sorot Latar Belakang */}
+          <div className="absolute -right-10 -bottom-10 w-40 h-40 bg-teal-500/10 rounded-full blur-3xl group-hover:bg-teal-500/15 transition-colors pointer-events-none" />
+          
+          <div className="flex items-start gap-4 min-w-0">
+            <div className="p-3 bg-teal-950/50 border border-teal-500/30 rounded-xl text-teal-400 shrink-0 group-hover:scale-110 transition-transform duration-300">
+              <Smartphone className="h-6 w-6" />
+            </div>
+            <div className="space-y-1.5 min-w-0">
+              <div className="flex items-center gap-2">
+                <span className="text-[10px] font-mono font-semibold uppercase tracking-wider text-teal-400 bg-teal-950/60 border border-teal-900 px-2 py-0.5 rounded">
+                  Mobile Development
+                </span>
+              </div>
+              <h2 className="text-lg sm:text-xl font-bold text-zinc-100 tracking-wide">
+                Koleksi Project Aplikasi Mobile
+              </h2>
+              <p className="text-xs sm:text-sm text-zinc-400 font-light leading-relaxed max-w-2xl">
+                Akses source code, berkas APK, dokumentasi, beserta aset desain lengkap untuk seluruh project pengembangan aplikasi mobile (Android/iOS) saya langsung di Google Drive.
+              </p>
+            </div>
+          </div>
+
+          <a 
+            href="https://drive.google.com/drive/folders/1aWAYeps2LKZLuWvjWxCqrSBDZsEXGZlN?hl=ID"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full md:w-auto inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-teal-500 text-zinc-950 text-xs sm:text-sm font-bold uppercase tracking-wider hover:bg-teal-400 transition-colors shadow-[0_0_15px_rgba(13,148,136,0.3)] hover:shadow-[0_0_20px_rgba(20,184,166,0.5)] shrink-0 group/drive"
+          >
+            <span>Buka Google Drive</span>
+            <ExternalLink className="h-4 w-4 group-hover/drive:translate-x-0.5 group-hover/drive:-translate-y-0.5 transition-transform" />
+          </a>
+        </div>
+        {/* ======================================================================= */}
+
+        {/* Grid Container Kartu Proyek (Web) */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
           {PROJECTS_DATA.map((project) => (
             <div 
