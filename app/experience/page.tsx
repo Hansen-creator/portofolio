@@ -65,7 +65,7 @@ const EXPERIENCE_DATA = [
     role: "Admin E-commerce",
     company: "PT. Zhejiang Yin",
     location: "Jakarta, Indonesia",
-    period: "Desember 2025 - Mei 2026",
+    period: "Desember 2025 - Juni 2026",
     icon: ShoppingBag,
     description: "Bertanggung jawab penuh atas manajemen operasional harian toko online, mencakup optimasi listing produk, pemrosesan pesanan, kontrol manajemen inventaris gudang, serta menganalisis tren performa penjualan berkala untuk meningkatkan retensi dan kepuasan pelanggan.",
     skills: ["E-commerce Operations", "Inventory Control", "Sales Data Analysis", "Customer Relationship Management"]
