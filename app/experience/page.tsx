@@ -9,7 +9,8 @@ import {
   Calendar, 
   MapPin, 
   Terminal,
-  FileSpreadsheet
+  FileSpreadsheet,
+  ShoppingBag // Ditambahkan untuk ikon Admin E-commerce
 } from 'lucide-react';
 import * as THREE from 'three';
 
@@ -61,6 +62,16 @@ function QuantumGrid() {
 const EXPERIENCE_DATA = [
   {
     id: 1,
+    role: "Admin E-commerce",
+    company: "PT. Zhejiang Yin",
+    location: "Jakarta, Indonesia",
+    period: "Desember 2025 - Mei 2026",
+    icon: ShoppingBag,
+    description: "Bertanggung jawab penuh atas manajemen operasional harian toko online, mencakup optimasi listing produk, pemrosesan pesanan, kontrol manajemen inventaris gudang, serta menganalisis tren performa penjualan berkala untuk meningkatkan retensi dan kepuasan pelanggan.",
+    skills: ["E-commerce Operations", "Inventory Control", "Sales Data Analysis", "Customer Relationship Management"]
+  },
+  {
+    id: 2,
     role: "IT Support (Industrial Internship)",
     company: "PT. Dima Indonesia",
     location: "Jakarta, Indonesia",
@@ -70,7 +81,7 @@ const EXPERIENCE_DATA = [
     skills: ["IT Troubleshooting", "STTA Management", "RFP System Support", "Web Implementation"]
   },
   {
-    id: 2,
+    id: 3,
     role: "Data Entry Intern",
     company: "Kantor Walikota Jakarta Barat",
     location: "Jakarta, Indonesia",
@@ -98,7 +109,6 @@ export default function Experience() {
       <div className="absolute bottom-1/3 left-1/4 w-[300px] sm:w-[400px] h-[300px] sm:h-[400px] bg-teal-500/5 rounded-full blur-[100px] sm:blur-[130px] pointer-events-none z-0" />
 
       {/* 2. KONTEN UTAMA */}
-      {/* mt-16 disematkan untuk menjamin title aman dan tidak terpotong oleh fixed navbar mobile */}
       <main className="relative z-10 w-full max-w-2xl px-5 mt-16 sm:mt-0 pt-16 sm:pt-24 flex flex-col gap-10 sm:gap-12">
         
         {/* Header Judul Halaman */}
