@@ -64,24 +64,31 @@ function QuantumGrid() {
   );
 }
 
-// Data sertifikat riil milik Anda
+// Data sertifikat riil milik Anda (Termasuk sertifikat baru dari Microsoft & Dicoding)
 const CERTIFICATES = [
   { 
     id: 1, 
+    title: "elevAlte with Dicoding Program (1)", 
+    issuer: "Microsoft & Dicoding Indonesia", 
+    year: "May 26, 2025",
+    image: "/cert-elevate.jpg" 
+  },
+  { 
+    id: 2, 
     title: "Full-Stack Web Development Certification", 
     issuer: "Sertifikasi Resmi", 
     year: "2024",
     image: "/cert-fullstack.jpg" 
   },
   { 
-    id: 2, 
+    id: 3, 
     title: "AWSome Day Online Conference", 
     issuer: "Amazon Web Services (AWS)", 
     year: "July 2024",
     image: "/cert-awsomeday.jpg" 
   },
   { 
-    id: 3, 
+    id: 4, 
     title: "Windows Server 2019-2022 Administration", 
     issuer: "Sertifikasi Kompetensi", 
     year: "2024",
@@ -305,7 +312,7 @@ export default function About() {
 
       {/* ==========================================
           MODAL LIGHTBOX FULLSCREEN VIEW (INTERAKTIF)
-         ========================================== */}
+          ========================================== */}
       {isModalOpen && (
         <div 
           className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-zinc-950/90 backdrop-blur-lg p-4 transition-all duration-300 animate-fadeIn"
